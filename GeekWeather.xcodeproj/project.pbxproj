@@ -48,6 +48,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0964773724BBC01E005491FE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E9A417DA24AA24B300FA241D /* Assets.xcassets */,
+				E9A417DC24AA24B300FA241D /* LaunchScreen.storyboard */,
+				E9A417D724AA24B100FA241D /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0964773824BBC03B005491FE /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0964773A24BBC078005491FE /* View */,
+				0964773924BBC05D005491FE /* Model */,
+				0964773B24BBC0D3005491FE /* Controller */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		0964773924BBC05D005491FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E9A417E924AA28E400FA241D /* City.swift */,
+				E9A417E524AA25A000FA241D /* NetworkService.swift */,
+				E9A417E724AA277D00FA241D /* Weather.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0964773A24BBC078005491FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0964773B24BBC0D3005491FE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0964773C24BBC0E4005491FE /* Delegates */,
+				E9A417D524AA24B100FA241D /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0964773C24BBC0E4005491FE /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				E9A417D124AA24B100FA241D /* AppDelegate.swift */,
+				E9A417D324AA24B100FA241D /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		8122C213A6C6B0EFC7CB34EB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,16 +141,9 @@
 		E9A417D024AA24B100FA241D /* GeekWeather */ = {
 			isa = PBXGroup;
 			children = (
-				E9A417E524AA25A000FA241D /* NetworkService.swift */,
-				E9A417D124AA24B100FA241D /* AppDelegate.swift */,
-				E9A417D324AA24B100FA241D /* SceneDelegate.swift */,
-				E9A417D524AA24B100FA241D /* ViewController.swift */,
-				E9A417D724AA24B100FA241D /* Main.storyboard */,
-				E9A417DA24AA24B300FA241D /* Assets.xcassets */,
-				E9A417DC24AA24B300FA241D /* LaunchScreen.storyboard */,
 				E9A417DF24AA24B300FA241D /* Info.plist */,
-				E9A417E724AA277D00FA241D /* Weather.swift */,
-				E9A417E924AA28E400FA241D /* City.swift */,
+				0964773724BBC01E005491FE /* Resources */,
+				0964773824BBC03B005491FE /* Sources */,
 			);
 			path = GeekWeather;
 			sourceTree = "<group>";
