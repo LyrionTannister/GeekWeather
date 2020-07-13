@@ -41,8 +41,8 @@ class NetworkService {
                 }
                 guard let data = data else { return }
                 do {
-                    let weather = try JSONDecoder().decode(WeatherResponse.self, from: data)
-                    resolver.fulfill(weather.list.first!)
+                    let weather = try JSONDecoder().decode(Weather.self, from: data)
+                    resolver.fulfill(weather)
                 } catch let jsonError {
                     resolver.reject(jsonError)
                 }
