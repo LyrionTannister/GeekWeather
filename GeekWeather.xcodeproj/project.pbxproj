@@ -16,7 +16,6 @@
 		E9A417DE24AA24B300FA241D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9A417DC24AA24B300FA241D /* LaunchScreen.storyboard */; };
 		E9A417E624AA25A000FA241D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A417E524AA25A000FA241D /* NetworkService.swift */; };
 		E9A417E824AA277D00FA241D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A417E724AA277D00FA241D /* Weather.swift */; };
-		E9A417EA24AA28E400FA241D /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A417E924AA28E400FA241D /* City.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		E9A417DF24AA24B300FA241D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9A417E524AA25A000FA241D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E9A417E724AA277D00FA241D /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
-		E9A417E924AA28E400FA241D /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +69,8 @@
 		0964773924BBC05D005491FE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				09DFCEEA24BBD12D00ECABB4 /* Weather */,
-				E9A417E924AA28E400FA241D /* City.swift */,
 				E9A417E524AA25A000FA241D /* NetworkService.swift */,
+				E9A417E724AA277D00FA241D /* Weather.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -101,14 +98,6 @@
 				E9A417D324AA24B100FA241D /* SceneDelegate.swift */,
 			);
 			path = Delegates;
-			sourceTree = "<group>";
-		};
-		09DFCEEA24BBD12D00ECABB4 /* Weather */ = {
-			isa = PBXGroup;
-			children = (
-				E9A417E724AA277D00FA241D /* Weather.swift */,
-			);
-			path = Weather;
 			sourceTree = "<group>";
 		};
 		8122C213A6C6B0EFC7CB34EB /* Pods */ = {
@@ -273,7 +262,6 @@
 			files = (
 				E9A417D624AA24B100FA241D /* ViewController.swift in Sources */,
 				E9A417D224AA24B100FA241D /* AppDelegate.swift in Sources */,
-				E9A417EA24AA28E400FA241D /* City.swift in Sources */,
 				E9A417E624AA25A000FA241D /* NetworkService.swift in Sources */,
 				E9A417D424AA24B100FA241D /* SceneDelegate.swift in Sources */,
 				E9A417E824AA277D00FA241D /* Weather.swift in Sources */,
