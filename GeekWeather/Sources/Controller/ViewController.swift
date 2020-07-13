@@ -46,16 +46,16 @@ class ViewController: UIViewController {
                     return
                 }
                 
-                print("\(weather.city)")
+                print("\(weather)")
                 try! self.realm.write {
                     self.realm.add(weather, update: .modified)
                 }
                 
-                self.locationLabel.text = "Today in \(weather.city)"
+                self.locationLabel.text = "Today in \(self.currentCity)"
                 
                 let df = DateFormatter()
                 df.dateFormat = "yyyy-MM-dd hh:mm:ss"
-                self.dateLabel.text = df.string(from: weather.date)
+                self.dateLabel.text = df.string(for: weather.date)
                 self.temperature.text = String(weather.temperature) + "°C"
             }
             .then { [weak self] weather -> Promise<UIImage> in
@@ -82,57 +82,23 @@ class ViewController: UIViewController {
 
     }
     
-    func getWeather(with cityName: String) {
-        hud.show(in: view)
-        networkService.weather(
-            for: cityName,
-            completionHandler: { response in
-                switch response {
-                case let .success(weather):
-                    print(weather.description)
-                    
-                    self.networkService.weatherImage(
-                        iconName: weather.icon,
-                        completionHandler: { response in
-                            switch response {
-                            case let .success(image):
-                                self.locationLabel.text = "Today in \(weather.city)"
-                                
-                                let df = DateFormatter()
-                                df.dateFormat = "yyyy-MM-dd hh:mm:ss"
-                                self.dateLabel.text = df.string(from: weather.date)
-                                self.temperature.text = String(weather.temperature) + "°C"
-                                self.weatherImage.image = image
-                                self.hud.dismiss(animated: true)
-                            case .failure(_):
-                                print("Some error with loading image")
-                            }
-                        }
-                    )
-                case let .failure(error):
-                    print(error)
-                }
-            }
-        )
-    }
-
     @IBAction func refreshButtonTapped(_ sender: Any) {
-        getWeather(with: currentCity)
+        launchPromiseChaining(with: currentCity)
     }
     
     @IBAction func moscowButtonTapped(_ sender: Any) {
         currentCity = "Moscow"
-        getWeather(with: currentCity)
+        launchPromiseChaining(with: currentCity)
     }
     
     @IBAction func londonButtonTapped(_ sender: Any) {
         currentCity = "London"
-        getWeather(with: currentCity)
+        launchPromiseChaining(with: currentCity)
     }
     
     @IBAction func berlinButtonTapped(_ sender: Any) {
         currentCity = "Berlin"
-        getWeather(with: currentCity)
+        launchPromiseChaining(with: currentCity)
     }
     
 }
