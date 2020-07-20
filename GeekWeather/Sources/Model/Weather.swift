@@ -2,9 +2,6 @@
 //  Weather.swift
 //  GeekWeather
 //
-//  Created by Mad Brains on 29.06.2020.
-//  Copyright © 2020 GeekTest. All rights reserved.
-//
 
 import Foundation
 import RealmSwift
@@ -12,7 +9,7 @@ import RealmSwift
 class Weather: Object, Decodable {
     
     @objc dynamic var id: String = ""
-    @objc dynamic var date: Double = 0
+    @objc dynamic var date: Date = Date.distantPast
     
     @objc dynamic var temperature: Double = 0
     @objc dynamic var pressure: Double = 0
@@ -40,7 +37,7 @@ class Weather: Object, Decodable {
         self.init()
         
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        self.date = try values.decode(Double.self, forKey: .date)
+        self.date = try values.decode(Date.self, forKey: .date)
                 
         let mainValues = try values.nestedContainer(keyedBy: MainKeys.self,
                                                    forKey: .main)

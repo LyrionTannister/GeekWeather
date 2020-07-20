@@ -55,7 +55,8 @@ class ViewController: UIViewController {
                 
                 let df = DateFormatter()
                 df.dateFormat = "yyyy-MM-dd hh:mm:ss"
-                self.dateLabel.text = df.string(for: weather.date)
+                print("\(weather.date)")
+                self.dateLabel.text = df.string(from: weather.date)
                 self.temperature.text = String(weather.temperature) + "°C"
             }
             .then { [weak self] weather -> Promise<UIImage> in
